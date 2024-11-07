@@ -38,6 +38,7 @@ defmodule RaffleyWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/rules", RuleController, :index
   end
 
   scope "/api", RaffleyWeb do
