@@ -8,6 +8,7 @@ defmodule RaffleyWeb.Router do
     plug :put_root_layout, html: {RaffleyWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :spy
     plug :snoop
   end
 
@@ -39,6 +40,7 @@ defmodule RaffleyWeb.Router do
 
     get "/", PageController, :home
     get "/rules", RuleController, :index
+    get "/rules/:id", RuleController, :show
   end
 
   scope "/api", RaffleyWeb do
