@@ -1,4 +1,8 @@
 defmodule Raffley.Rules do
+
+  @doc"""
+  List all the rules
+  """
   def list_rules() do
     [
       %{
