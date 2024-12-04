@@ -85,6 +85,7 @@ defmodule RaffleyWeb do
       import Phoenix.HTML
       # Core UI components and translation
       import RaffleyWeb.CoreComponents
+      import RaffleyWeb.CustomComponents
       import RaffleyWeb.Gettext
 
       # Shortcut for generating JS commands
