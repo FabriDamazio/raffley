@@ -11,6 +11,15 @@ defmodule RaffleyWeb.RaffleLive.Index do
   def render(assigns) do
     ~H"""
     <div class="raffle-index">
+      <.banner :let={vibe}>
+        <.icon name="hero-sparkles-solid" /> Mistery Raffle Coming Soon! <%= vibe %>
+        <:details>
+          To Be Revelead Tomorrow
+        </:details>
+        <:details>
+          Any guesses?
+        </:details>
+      </.banner>
       <div class="raffles">
         <.raffle_card :for={raffle <- @raffles} raffle={raffle} />
       </div>
@@ -29,7 +38,7 @@ defmodule RaffleyWeb.RaffleLive.Index do
         <div class="price">
           $<%= @raffle.ticket_price %> / ticket
         </div>
-        <.badge status={@raffle.status}  />
+        <.badge status={@raffle.status} />
       </div>
     </div>
     """
